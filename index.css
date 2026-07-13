@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://static.figma.com/font/CormorantGaramond-Regular_2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://static.figma.com/font/CormorantGaramond-Medium_2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://static.figma.com/font/CormorantGaramond-SemiBold_2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://static.figma.com/font/CormorantGaramond-Bold_2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://static.figma.com/font/CormorantGaramond-Italic_2') format('woff2');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('https://static.figma.com/font/Manrope_wght__1') format('woff2');
+}
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Manrope', system-ui, sans-serif;
+
+  --color-bg-primary: #121614;
+  --color-bg-card: #1a211d;
+  --color-moss-deep: #27362E;
+  --color-moss-forest: #3F5145;
+  --color-moss-muted: #5D6E60;
+  --color-sand-warm: #E7DDCF;
+  --color-sand-soft: #F5F1EB;
+  --color-charcoal: #1D1D1D;
+  --color-brass: #B08D57;
+  --color-brass-light: #C9A97A;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background-color: #121614;
+  color: #E7DDCF;
+  font-family: 'Manrope', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  /* Respect the safe area on notched phones when deployed as a full-bleed site */
+  padding-top: env(safe-area-inset-top);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
+
+.font-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
